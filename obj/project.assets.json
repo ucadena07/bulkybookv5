@@ -1727,6 +1727,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "BulkyBookV5.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.8"
+        },
+        "compile": {
+          "bin/placeholder/BulkyBookV5.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BulkyBookV5.DataAccess.dll": {}
+        }
       }
     }
   },
@@ -6137,14 +6150,22 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "BulkyBookV5.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../BulkyBookV5.DataAccess/BulkyBookV5.DataAccess.csproj",
+      "msbuildProject": "../BulkyBookV5.DataAccess/BulkyBookV5.DataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "BulkyBookV5.DataAccess >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.8",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.8",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.8",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.1.8",
+      "Microsoft.EntityFrameworkCore >= 3.1.8",
+      "Microsoft.EntityFrameworkCore.Relational >= 3.1.8",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.8",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.8"
     ]
@@ -6179,7 +6200,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ucade\\Documents\\MVC\\Tutorial\\BulkyBookV5.DataAccess\\BulkyBookV5.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ucade\\Documents\\MVC\\Tutorial\\BulkyBookV5.DataAccess\\BulkyBookV5.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -6204,6 +6229,14 @@
             "version": "[3.1.8, )"
           },
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+            "target": "Package",
+            "version": "[3.1.8, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.1.8, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
             "version": "[3.1.8, )"
           },
