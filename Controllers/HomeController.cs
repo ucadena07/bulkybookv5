@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using BulkyBookV5.Models;
+using BulkyBookV5.Models.ViewModels;
 
 namespace BulkyBookV5.Controllers
 {

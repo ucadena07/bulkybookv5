@@ -1732,6 +1732,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "BulkyBookV5.Models": "1.0.0",
+          "BulkyBookV5.Utility": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.8"
         },
         "compile": {
@@ -1739,6 +1741,26 @@
         },
         "runtime": {
           "bin/placeholder/BulkyBookV5.DataAccess.dll": {}
+        }
+      },
+      "BulkyBookV5.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/BulkyBookV5.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BulkyBookV5.Models.dll": {}
+        }
+      },
+      "BulkyBookV5.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/BulkyBookV5.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BulkyBookV5.Utility.dll": {}
         }
       }
     }
@@ -6155,11 +6177,23 @@
       "type": "project",
       "path": "../BulkyBookV5.DataAccess/BulkyBookV5.DataAccess.csproj",
       "msbuildProject": "../BulkyBookV5.DataAccess/BulkyBookV5.DataAccess.csproj"
+    },
+    "BulkyBookV5.Models/1.0.0": {
+      "type": "project",
+      "path": "../BulkyBookV5.Models/BulkyBookV5.Models.csproj",
+      "msbuildProject": "../BulkyBookV5.Models/BulkyBookV5.Models.csproj"
+    },
+    "BulkyBookV5.Utility/1.0.0": {
+      "type": "project",
+      "path": "../BulkyBookV5.Utility/BulkyBookV5.Utility.csproj",
+      "msbuildProject": "../BulkyBookV5.Utility/BulkyBookV5.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "BulkyBookV5.DataAccess >= 1.0.0",
+      "BulkyBookV5.Models >= 1.0.0",
+      "BulkyBookV5.Utility >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.8",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.8",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.8",
@@ -6203,6 +6237,12 @@
           "projectReferences": {
             "C:\\Users\\ucade\\Documents\\MVC\\Tutorial\\BulkyBookV5.DataAccess\\BulkyBookV5.DataAccess.csproj": {
               "projectPath": "C:\\Users\\ucade\\Documents\\MVC\\Tutorial\\BulkyBookV5.DataAccess\\BulkyBookV5.DataAccess.csproj"
+            },
+            "C:\\Users\\ucade\\Documents\\MVC\\Tutorial\\BulkyBookV5.Models\\BulkyBookV5.Models.csproj": {
+              "projectPath": "C:\\Users\\ucade\\Documents\\MVC\\Tutorial\\BulkyBookV5.Models\\BulkyBookV5.Models.csproj"
+            },
+            "C:\\Users\\ucade\\Documents\\MVC\\Tutorial\\BulkyBookV5.Utility\\BulkyBookV5.Utility.csproj": {
+              "projectPath": "C:\\Users\\ucade\\Documents\\MVC\\Tutorial\\BulkyBookV5.Utility\\BulkyBookV5.Utility.csproj"
             }
           }
         }

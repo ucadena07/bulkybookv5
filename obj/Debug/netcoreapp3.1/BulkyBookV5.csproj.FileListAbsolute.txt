@@ -390,3 +390,5 @@ C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\static
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.dll
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.pdb
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.genruntimeconfig.cache
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\BulkyBookV5.Models.dll
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\BulkyBookV5.Models.pdb

@@ -21,13 +21,13 @@ using BulkyBookV5;
 #nullable disable
 #nullable restore
 #line 2 "C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\Views\_ViewImports.cshtml"
-using BulkyBookV5.Models;
+using BulkyBookV5.Models.ViewModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"38bd387cf81c41cad05e3c6b148a389cdd5a111d", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c88694e5820a6ea78b2a95f5c95c6e4f5c7d3f45", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"950ad65521454702f3ebda2df3af50212212a362", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
