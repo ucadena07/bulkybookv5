@@ -18,11 +18,21 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BulkyBookV5.DataAccess\BulkyBookV5.DataAccess.csproj" />
     <ProjectReference Include="..\BulkyBookV5.Models\BulkyBookV5.Models.csproj" />
+    <ProjectReference Include="..\BulkyBookV5.Utility\BulkyBookV5.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
 
 </Project>
