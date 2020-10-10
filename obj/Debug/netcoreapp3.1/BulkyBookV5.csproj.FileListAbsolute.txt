@@ -461,3 +461,6 @@ C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyB
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Upsert.cshtml.g.cs
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CreateAndBackToListButton.cshtml.g.cs
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_EditAndBackToListButton.cshtml.g.cs
