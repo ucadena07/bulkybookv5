@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BulkyBookV5.Models.ViewModels;
+using BulkyBookV5.DataAccess.Repository.IRepository;
+using BulkyBookV5.Models;
 
 namespace BulkyBookV5.Areas.Customer.Controllers
 {
@@ -14,15 +16,18 @@ namespace BulkyBookV5.Areas.Customer.Controllers
     {
         
         private readonly ILogger<HomeController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
+            return View(productList);
         }
 
         public IActionResult Privacy()
