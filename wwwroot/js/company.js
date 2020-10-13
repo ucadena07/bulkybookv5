@@ -12,10 +12,23 @@ function loadDataTable() {
         },
         "columns": [
             { "data": "name", "width": "15%" },
-            { "data": "streetname", "width": "15%" },
-            { "data": "city", "width": "15%" },
-            { "data": "state", "width": "15%" },
-            { "data": "phonenumber", "width": "15%" },
+            { "data": "streetName", "width": "15%" },
+            { "data": "city", "width": "10%" },
+            { "data": "state", "width": "10%" },
+            { "data": "phoneNumber", "width": "15%" },
+            {
+                "data": "isAuthorizedCompany",
+                "render": function (data) {
+                    if (data) {
+                        return `<input type="checkbox" disabled checked />`
+                    }
+                    else {
+                        return `<input type="checkbox" disabled />`
+                    }
+                },
+                "width" : "10%"
+            },
+            
             {
                 "data": "id",
                 "render": function (data) {
@@ -30,7 +43,7 @@ function loadDataTable() {
                             </div>
 
                             `;
-                }, "width": "40"
+                }, "width": "25%"
             }
         ]
     });
