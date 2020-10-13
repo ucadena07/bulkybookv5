@@ -14,6 +14,8 @@ using Microsoft.Extensions.Hosting;
 using BulkyBookV5.DataAccess.Data;
 using BulkyBookV5.DataAccess.Repository.IRepository;
 using BulkyBookV5.DataAccess.Repository;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using BulkyBookV5.Utility;
 
 namespace BulkyBookV5
 {
@@ -32,8 +34,9 @@ namespace BulkyBookV5
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddSingleton<IEmailSender, EmailSender>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
