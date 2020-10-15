@@ -4,13 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using BulkyBookV5.DataAccess.Repository.IRepository;
 using BulkyBookV5.Models;
+using BulkyBookV5.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 
 namespace BulkyBookV5.Areas.Admin.Controllers
 {
     [Area("Admin")]
-
+    [Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
