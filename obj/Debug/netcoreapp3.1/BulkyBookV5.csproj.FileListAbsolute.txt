@@ -510,3 +510,4 @@ C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs

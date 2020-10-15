@@ -2,63 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BulkyBookV5.DataAccess.Data;
 using BulkyBookV5.DataAccess.Repository.IRepository;
 using BulkyBookV5.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
+using Microsoft.EntityFrameworkCore;
 
 namespace BulkyBookV5.Areas.Admin.Controllers
 {
     [Area("Admin")]
 
-    public class CategoryController : Controller
+    public class UserController : Controller
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly ApplicationDbContext _db;
 
-        public CategoryController(IUnitOfWork unitOfWork)
+        public UserController(ApplicationDbContext db)
         {
-            _unitOfWork = unitOfWork;
+            _db = db;
         }
         public IActionResult Index()
         {
             return View();
-        }
-
-        public IActionResult Upsert(int? id)
-        {
-            Category category = new Category();
-            if(id == null)
-            {
-                return View(category);
-            }
-            category = _unitOfWork.Category.Get(id.GetValueOrDefault());
-            if(category == null)
-            {
-                return NotFound();
-            }
-            return View(category);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Category category)
-        {
-            if (ModelState.IsValid)
-            {
-                if(category.Id == 0)
-                {
-                    _unitOfWork.Category.Add(category);
-                   
-                }
-                else
-                {
-                    _unitOfWork.Category.Update(category);
-                }
-                _unitOfWork.Save();
-                return RedirectToAction(nameof(Index));
-
-            }
-            return View(category);
         }
 
         #region API CALLS
@@ -66,22 +31,24 @@ namespace BulkyBookV5.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var allObj = _unitOfWork.Category.GetAll();
-            return Json(new { data = allObj });
+            var userList = _db.ApplicationUsers.Include(u=>u.Company).ToList();
+            var userRole = _db.UserRoles.ToList();
+            var roles = _db.Roles.ToList();
+            foreach (var user in userList)
+            {
+                var roleId = userRole.FirstOrDefault(u => u.UserId == user.Id).RoleId;
+                user.Role = roles.FirstOrDefault(u => u.Id == roleId).Name;
+                if(user.Company == null)
+                {
+                    user.Company = new Company()
+                    {
+                        Name = ""
+                    };
+                }
+            }
+            return Json(new { data = userList });
         }
 
-        [HttpDelete]
-        public IActionResult Delete(int id)
-        {
-            var objFromDb = _unitOfWork.Category.Get(id);
-            if(objFromDb == null)
-            {
-                return Json(new { success = false, message="Error while deleting" });
-            }
-            _unitOfWork.Category.Remove(objFromDb);
-            _unitOfWork.Save();
-            return Json(new { success = true, message = "Delete Succesful" });
-        }
 
         #endregion
     }
