@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YPRvSkEgXOludIr309Kw0a07pHtUivfg/KdzaTEc5n8u8gukT+8Q6yfHAVD2uurNTtvN+uHF8HwXI4s9ZR6tAw==",
+  "dgSpecHash": "OtxM3QFW14auNhzRMtJH1L3OuQuToOpzgnDLPQammz8QriWE7mR8YeVffbBe6Uz4cxnANuxIMrKVokJZI0GMow==",
   "success": true,
   "projectFilePath": "C:\\Users\\ucade\\Documents\\MVC\\Tutorial\\BulkyBookV5\\BulkyBookV5.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\ucade\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\ucade\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ucade\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
+    "C:\\Users\\ucade\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\3.1.9\\microsoft.aspnetcore.authentication.facebook.3.1.9.nupkg.sha512",
+    "C:\\Users\\ucade\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.9\\microsoft.aspnetcore.authentication.google.3.1.9.nupkg.sha512",
     "C:\\Users\\ucade\\.nuget\\packages\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
     "C:\\Users\\ucade\\.nuget\\packages\\microsoft.aspnetcore.authorization.policy\\2.2.0\\microsoft.aspnetcore.authorization.policy.2.2.0.nupkg.sha512",
     "C:\\Users\\ucade\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.8\\microsoft.aspnetcore.cryptography.internal.3.1.8.nupkg.sha512",

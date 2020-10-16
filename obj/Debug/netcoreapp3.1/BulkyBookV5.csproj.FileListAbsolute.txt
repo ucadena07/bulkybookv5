@@ -457,9 +457,6 @@ C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\runtim
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.csproj.CoreCompileInputs.cache
-C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Index.cshtml.g.cs
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Category\Upsert.cshtml.g.cs
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CreateAndBackToListButton.cshtml.g.cs
@@ -511,3 +508,8 @@ C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.csproj.CoreCompileInputs.cache
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.MvcApplicationPartsAssemblyInfo.cache
