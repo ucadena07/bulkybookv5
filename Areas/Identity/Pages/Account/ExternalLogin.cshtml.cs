@@ -97,7 +97,7 @@ namespace BulkyBookV5.Areas.Identity.Pages.Account
                 _logger.LogInformation("{Name} logged in with {LoginProvider} provider.", info.Principal.Identity.Name, info.LoginProvider);
                 return LocalRedirect(returnUrl);
             }
-            if (result.IsLockedOut)
+            if (result.IsLockedOut) 
             {
                 return RedirectToPage("./Lockout");
             }
