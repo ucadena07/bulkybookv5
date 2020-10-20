@@ -513,3 +513,5 @@ C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\Micros
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.csproj.CoreCompileInputs.cache
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\SendGrid.dll
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\bin\Debug\netcoreapp3.1\StarkbankEcdsa.dll
