@@ -8,6 +8,8 @@ using Microsoft.Extensions.Logging;
 using BulkyBookV5.Models.ViewModels;
 using BulkyBookV5.DataAccess.Repository.IRepository;
 using BulkyBookV5.Models;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace BulkyBookV5.Areas.Customer.Controllers
 {
@@ -46,6 +48,54 @@ namespace BulkyBookV5.Areas.Customer.Controllers
 
 
             return View(cartObj);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public IActionResult Details(ShoppingCart CartObject)
+        {
+            CartObject.Id = 0;
+            if (ModelState.IsValid)
+            {
+                //Then add to cart 
+                var claimIdentity = (ClaimsIdentity)User.Identity;
+                var claim = claimIdentity.FindFirst(ClaimTypes.NameIdentifier);
+                CartObject.ApplicationUserId = claim.Value;
+
+                ShoppingCart cartFromDb = _unitOfWork.ShoppingCart.GetFirstOrDefault(
+                    u => u.ApplicationUserId == CartObject.ApplicationUserId && u.ProductId == CartObject.ProductId,
+                    includeProperties:"Product");
+
+                if(cartFromDb == null)
+                {
+                    //No records exists in database for the product for thaat user
+                    _unitOfWork.ShoppingCart.Add(CartObject);
+                }
+                else
+                {
+                    cartFromDb.Count += CartObject.Count;
+                    _unitOfWork.ShoppingCart.Update(cartFromDb);
+                }
+                _unitOfWork.Save();
+
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                var productFromDb = _unitOfWork.Product.
+                    GetFirstOrDefault(u => u.Id == CartObject.ProductId, includeProperties: "Category,CoverType");
+                ShoppingCart cartObj = new ShoppingCart()
+                {
+                    Product = productFromDb,
+                    ProductId = productFromDb.Id
+                };
+
+                return View(cartObj);
+
+            }
+
+
+            
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
