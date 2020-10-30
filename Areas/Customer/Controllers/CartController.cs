@@ -5,12 +5,14 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using BulkyBookV5.DataAccess.Repository.IRepository;
 using BulkyBookV5.Models.ViewModels;
+using BulkyBookV5.Utility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BulkyBookV5.Areas.Customer.Controllers
 {
+    [Area("Customer")]
     public class CartController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -37,7 +39,7 @@ namespace BulkyBookV5.Areas.Customer.Controllers
             ShoppingCartVM = new ShoppingCartVM()
             {
                 OrderHeader = new Models.OrderHeader(),
-                ListCart = _unitOfWork.ShoppingCart.GetAll(u=> u.ApplicationUserId == claim.Value, includeProperties:"Products")
+                ListCart = _unitOfWork.ShoppingCart.GetAll(u=> u.ApplicationUserId == claim.Value, includeProperties:"Product")
             };
             ShoppingCartVM.OrderHeader.OrderTotal = 0;
             ShoppingCartVM.OrderHeader.ApplicationUser = _unitOfWork.ApplicationUser
@@ -45,9 +47,15 @@ namespace BulkyBookV5.Areas.Customer.Controllers
                                                             includeProperties: "Company");
             foreach(var list in ShoppingCartVM.ListCart)
             {
-                list.Product = _unitOfWork.Product.GetFirstOrDefault();
+                list.Price = SD.GetrPriceBasedOnQuantity(list.Count, list.Product.Price, list.Product.Price50, list.Product.Price100);
+                ShoppingCartVM.OrderHeader.OrderTotal += (list.Price * list.Count);
+                list.Product.Description = SD.ConvertToRawHtml(list.Product.Description);
+                if(list.Product.Description.Length > 100)
+                {
+                    list.Product.Description = list.Product.Description.Substring(0, 99) + "...";
+                }
             }
-            return View();
+            return View(ShoppingCartVM);
         }
     }
 }
