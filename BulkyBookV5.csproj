@@ -35,4 +35,8 @@
     <Folder Include="wwwroot\images\products\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\Order\Index.cshtml" />
+  </ItemGroup>
+
 </Project>
