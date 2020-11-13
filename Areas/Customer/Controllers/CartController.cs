@@ -197,7 +197,7 @@ namespace BulkyBookV5.Areas.Customer.Controllers
             _unitOfWork.OrderHeader.Add(ShoppingCartVM.OrderHeader);
             _unitOfWork.Save();
 
-            List<OrderDetails> orderDetailsList = new List<OrderDetails>();
+           
 
             foreach(var item in ShoppingCartVM.ListCart)
             {

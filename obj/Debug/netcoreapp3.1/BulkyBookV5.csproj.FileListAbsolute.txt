@@ -521,3 +521,4 @@ C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyB
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\BulkyBookV5.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Customer\Views\Cart\OrderConfirmation.cshtml.g.cs
 C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Order\Index.cshtml.g.cs
+C:\Users\ucade\Documents\MVC\Tutorial\BulkyBookV5\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Order\Details.cshtml.g.cs
